@@ -5,15 +5,12 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const features = [
-  "Designer furnishings throughout",
-  "Floor-to-ceiling windows",
-  "Smart home technology",
-  "Premium sound system",
-];
+const featureKeys = ["designer", "windows", "smart", "sound"] as const;
 
 export default function About() {
+  const t = useTranslations("About");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -48,30 +45,26 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="text-label mb-4 block">The Experience</span>
+            <span className="text-label mb-4 block">{t("label")}</span>
             <h2 className="heading-section text-neutral-950 dark:text-white mb-6">
-              Refined Living in the
+              {t("title.line1")}
               <br />
-              <span className="text-gradient">Heart of Rome</span>
+              <span className="text-gradient">{t("title.line2")}</span>
             </h2>
 
             <p className="text-neutral-600 dark:text-white/60 leading-relaxed mb-6 text-lg">
-              6 Al Top is more than accommodation—it&apos;s an immersive experience.
-              Our meticulously designed retreat combines contemporary luxury with
-              authentic Roman character.
+              {t("description1")}
             </p>
 
             <p className="text-neutral-600 dark:text-white/60 leading-relaxed mb-10">
-              Every element has been thoughtfully curated: from the custom Italian
-              furnishings to the state-of-the-art amenities, creating a space that
-              feels both sophisticated and welcoming.
+              {t("description2")}
             </p>
 
             {/* Features */}
             <div className="grid grid-cols-2 gap-4 mb-10">
-              {features.map((feature, index) => (
+              {featureKeys.map((key, index) => (
                 <motion.div
-                  key={feature}
+                  key={key}
                   initial={{ opacity: 0, y: 10 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
@@ -80,13 +73,13 @@ export default function About() {
                   <div className="w-6 h-6 rounded-full bg-gold-500/20 dark:bg-gold-400/20 flex items-center justify-center">
                     <Check className="w-3.5 h-3.5 text-gold-500 dark:text-gold-400" />
                   </div>
-                  <span className="text-sm text-neutral-600 dark:text-white/70">{feature}</span>
+                  <span className="text-sm text-neutral-600 dark:text-white/70">{t(`features.${key}`)}</span>
                 </motion.div>
               ))}
             </div>
 
             <a href="#gallery" className="btn-primary">
-              View Gallery
+              {t("button")}
             </a>
           </motion.div>
         </div>

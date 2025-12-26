@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const galleryImages = [
   {
@@ -44,6 +45,7 @@ const galleryImages = [
 ];
 
 export default function Gallery() {
+  const t = useTranslations("Gallery");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -74,12 +76,12 @@ export default function Gallery() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16 md:mb-20 max-w-2xl mx-auto"
           >
-            <span className="text-label mb-4 block">Visual Tour</span>
+            <span className="text-label mb-4 block">{t("label")}</span>
             <h2 className="heading-section text-neutral-950 dark:text-white mb-6">
-              Explore <span className="text-gradient">The Space</span>
+              {t("title.line1")} <span className="text-gradient">{t("title.line2")}</span>
             </h2>
             <p className="text-neutral-600 dark:text-white/60">
-              Step inside our meticulously designed retreat.
+              {t("subtitle")}
             </p>
           </motion.div>
 
@@ -103,7 +105,7 @@ export default function Gallery() {
                 <div className="absolute inset-0 bg-neutral-950/0 group-hover:bg-neutral-950/40 dark:group-hover:bg-neutral-950/40 transition-colors duration-500" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <span className="text-white text-sm font-medium px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
-                    View
+                    {t("view")}
                   </span>
                 </div>
               </motion.div>

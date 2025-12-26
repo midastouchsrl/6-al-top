@@ -33,3 +33,4 @@ Thumbs.db
 
 # HATEFUL VPS-specific context (runtime-generated)
 .hateful/context/
+.vercel

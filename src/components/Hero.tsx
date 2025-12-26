@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown, MapPin, Star } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   return (
     <section
       id="home"
@@ -31,7 +34,7 @@ export default function Hero() {
         className="absolute top-32 left-8 md:left-16 hidden md:flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-white/10 backdrop-blur-md rounded-full border border-black/10 dark:border-white/10"
       >
         <MapPin className="w-4 h-4 text-gold-500 dark:text-gold-400" />
-        <span className="text-sm text-white/80">Rome, Italy</span>
+        <span className="text-sm text-white/80">{t("badge.rome")}</span>
       </motion.div>
 
       <motion.div
@@ -41,7 +44,7 @@ export default function Hero() {
         className="absolute top-32 right-8 md:right-16 hidden md:flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-white/10 backdrop-blur-md rounded-full border border-black/10 dark:border-white/10"
       >
         <Star className="w-4 h-4 text-gold-500 dark:text-gold-400 fill-gold-500 dark:fill-gold-400" />
-        <span className="text-sm text-white/80">5.0 Rating</span>
+        <span className="text-sm text-white/80">{t("badge.rating")}</span>
       </motion.div>
 
       {/* Content */}
@@ -52,9 +55,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="heading-hero text-white mb-8"
         >
-          Live Above
+          {t("title.line1")}
           <br />
-          <span className="text-gradient">The Eternal City</span>
+          <span className="text-gradient">{t("title.line2")}</span>
         </motion.h1>
 
         <motion.p
@@ -63,8 +66,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-white/70 max-w-xl mx-auto mb-12 font-light leading-relaxed"
         >
-          A designer suite on the 6th floor with panoramic views, steps from
-          Rome&apos;s iconic landmarks
+          {t("subtitle")}
         </motion.p>
 
         <motion.div
@@ -74,10 +76,10 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a href="#apartment" className="btn-primary">
-            Explore
+            {t("buttons.explore")}
           </a>
           <a href="#contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/30 text-white backdrop-blur-sm font-medium text-sm tracking-wide rounded-full transition-all duration-300 ease-out hover:bg-white/10 hover:border-white/50">
-            Book Your Stay
+            {t("buttons.book")}
           </a>
         </motion.div>
 
@@ -89,9 +91,9 @@ export default function Hero() {
           className="mt-20 grid grid-cols-3 gap-8 max-w-md mx-auto"
         >
           {[
-            { value: "6th", label: "Floor" },
-            { value: "2min", label: "to Termini" },
-            { value: "4.9", label: "Guest Rating", showStar: true },
+            { value: "6th", label: t("stats.floor") },
+            { value: "2min", label: t("stats.toTermini") },
+            { value: "4.9", label: t("stats.guestRating"), showStar: true },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl md:text-3xl font-display font-semibold text-white flex items-center justify-center gap-1">

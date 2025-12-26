@@ -13,51 +13,21 @@ import {
   ShowerHead,
   Sparkles,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const amenities = [
-  {
-    icon: Waves,
-    title: "Jacuzzi",
-    description: "28-jet hydromassage with chromotherapy",
-  },
-  {
-    icon: ShowerHead,
-    title: "Spa Shower",
-    description: "Multi-jet rainfall experience",
-  },
-  {
-    icon: Tv,
-    title: "4K Entertainment",
-    description: "55\" + 50\" TVs with Sky & Netflix",
-  },
-  {
-    icon: Flame,
-    title: "Fireplace",
-    description: "Eco-friendly bioethanol design",
-  },
-  {
-    icon: Wind,
-    title: "Climate",
-    description: "Smart AC & heating control",
-  },
-  {
-    icon: Coffee,
-    title: "Kitchen",
-    description: "Full appliances & espresso machine",
-  },
-  {
-    icon: Wifi,
-    title: "Fast WiFi",
-    description: "Fiber-optic connection",
-  },
-  {
-    icon: Sparkles,
-    title: "Luxury Linens",
-    description: "Egyptian cotton bedding",
-  },
-];
+const amenityConfig = [
+  { key: "jacuzzi", icon: Waves },
+  { key: "shower", icon: ShowerHead },
+  { key: "tv", icon: Tv },
+  { key: "fireplace", icon: Flame },
+  { key: "climate", icon: Wind },
+  { key: "kitchen", icon: Coffee },
+  { key: "wifi", icon: Wifi },
+  { key: "linens", icon: Sparkles },
+] as const;
 
 export default function Amenities() {
+  const t = useTranslations("Amenities");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -75,20 +45,20 @@ export default function Amenities() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 md:mb-20 max-w-2xl mx-auto"
         >
-          <span className="text-label mb-4 block">What We Offer</span>
+          <span className="text-label mb-4 block">{t("label")}</span>
           <h2 className="heading-section text-neutral-950 dark:text-white mb-6">
-            Premium <span className="text-gradient">Amenities</span>
+            {t("title.line1")} <span className="text-gradient">{t("title.line2")}</span>
           </h2>
           <p className="text-neutral-600 dark:text-white/60">
-            Every detail designed for your comfort and convenience.
+            {t("subtitle")}
           </p>
         </motion.div>
 
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {amenities.map((amenity, index) => (
+          {amenityConfig.map((amenity, index) => (
             <motion.div
-              key={amenity.title}
+              key={amenity.key}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.08 }}
@@ -98,10 +68,10 @@ export default function Amenities() {
                 <amenity.icon className="w-6 h-6 text-gold-500 dark:text-gold-400" />
               </div>
               <h3 className="text-lg font-display font-semibold text-neutral-950 dark:text-white mb-2">
-                {amenity.title}
+                {t(`items.${amenity.key}.title`)}
               </h3>
               <p className="text-sm text-neutral-500 dark:text-white/50 leading-relaxed">
-                {amenity.description}
+                {t(`items.${amenity.key}.description`)}
               </p>
             </motion.div>
           ))}

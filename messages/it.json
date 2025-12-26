@@ -1,0 +1,179 @@
+{
+  "Metadata": {
+    "title": "6 Al Top | Appartamento di Lusso a Roma",
+    "description": "Vivi Roma dall'alto. Una suite di design al 6° piano con vista panoramica, a pochi passi dai monumenti iconici di Roma."
+  },
+  "Navbar": {
+    "home": "Home",
+    "apartment": "Appartamento",
+    "amenities": "Servizi",
+    "gallery": "Galleria",
+    "location": "Posizione",
+    "bookNow": "Prenota"
+  },
+  "Hero": {
+    "badge": {
+      "rome": "Roma, Italia",
+      "rating": "Valutazione 5.0"
+    },
+    "title": {
+      "line1": "Vivi Sopra",
+      "line2": "La Città Eterna"
+    },
+    "subtitle": "Una suite di design al 6° piano con vista panoramica, a pochi passi dai monumenti iconici di Roma",
+    "buttons": {
+      "explore": "Esplora",
+      "book": "Prenota il Tuo Soggiorno"
+    },
+    "stats": {
+      "floor": "Piano",
+      "toTermini": "da Termini",
+      "guestRating": "Valutazione Ospiti"
+    }
+  },
+  "About": {
+    "label": "L'Esperienza",
+    "title": {
+      "line1": "Vivere Raffinato nel",
+      "line2": "Cuore di Roma"
+    },
+    "description1": "6 Al Top è più di un semplice alloggio—è un'esperienza immersiva. Il nostro rifugio meticolosamente progettato combina lusso contemporaneo con autentico carattere romano.",
+    "description2": "Ogni elemento è stato curato con attenzione: dagli arredi italiani su misura ai servizi all'avanguardia, creando uno spazio sofisticato e accogliente.",
+    "features": {
+      "designer": "Arredi di design in tutto l'appartamento",
+      "windows": "Finestre dal pavimento al soffitto",
+      "smart": "Tecnologia smart home",
+      "sound": "Sistema audio premium"
+    },
+    "button": "Guarda la Galleria"
+  },
+  "Amenities": {
+    "label": "Cosa Offriamo",
+    "title": {
+      "line1": "Servizi",
+      "line2": "Premium"
+    },
+    "subtitle": "Ogni dettaglio progettato per il tuo comfort e la tua comodità.",
+    "items": {
+      "jacuzzi": {
+        "title": "Jacuzzi",
+        "description": "Idromassaggio a 28 getti con cromoterapia"
+      },
+      "shower": {
+        "title": "Doccia Spa",
+        "description": "Esperienza multi-getto a pioggia"
+      },
+      "tv": {
+        "title": "Intrattenimento 4K",
+        "description": "TV 55\" + 50\" con Sky e Netflix"
+      },
+      "fireplace": {
+        "title": "Camino",
+        "description": "Design ecologico a bioetanolo"
+      },
+      "climate": {
+        "title": "Clima",
+        "description": "Controllo smart AC e riscaldamento"
+      },
+      "kitchen": {
+        "title": "Cucina",
+        "description": "Elettrodomestici completi e macchina espresso"
+      },
+      "wifi": {
+        "title": "WiFi Veloce",
+        "description": "Connessione in fibra ottica"
+      },
+      "linens": {
+        "title": "Biancheria di Lusso",
+        "description": "Lenzuola in cotone egiziano"
+      }
+    }
+  },
+  "Gallery": {
+    "label": "Tour Visivo",
+    "title": {
+      "line1": "Esplora lo",
+      "line2": "Spazio"
+    },
+    "subtitle": "Entra nel nostro rifugio meticolosamente progettato.",
+    "view": "Guarda"
+  },
+  "Location": {
+    "label": "Posizione",
+    "title": {
+      "line1": "Nel Cuore di",
+      "line2": "Roma"
+    },
+    "description": "Posizione strategica su Via Milazzo, a pochi passi dalla Stazione Termini. I tesori più grandi di Roma sono alla tua porta.",
+    "highlights": {
+      "termini": {
+        "title": "Stazione Termini",
+        "subtitle": "2 min a piedi"
+      },
+      "colosseum": {
+        "title": "Colosseo",
+        "subtitle": "10 min"
+      },
+      "vatican": {
+        "title": "Vaticano",
+        "subtitle": "15 min"
+      },
+      "restaurants": {
+        "title": "Ristoranti",
+        "subtitle": "Ovunque"
+      }
+    },
+    "address": {
+      "label": "Indirizzo",
+      "street": "Via Milazzo, 14",
+      "city": "00185 Roma, Italia"
+    }
+  },
+  "Contact": {
+    "label": "Contattaci",
+    "title": {
+      "line1": "Prenota il Tuo",
+      "line2": "Soggiorno"
+    },
+    "subtitle": "Pronto a vivere Roma dall'alto? Contattaci per la disponibilità.",
+    "info": {
+      "email": "Email",
+      "phone": "Telefono",
+      "fastResponse": "Risposta Rapida",
+      "responseTime": "Rispondiamo solitamente entro 2 ore durante l'orario lavorativo."
+    },
+    "bookDirectly": "Prenota direttamente",
+    "buttons": {
+      "booking": "Booking",
+      "whatsapp": "WhatsApp"
+    },
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Mario Rossi",
+      "email": "Email",
+      "emailPlaceholder": "mario@esempio.com",
+      "phone": "Telefono",
+      "phonePlaceholder": "+39 123 456 7890",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "selectDate": "Seleziona data",
+      "message": "Messaggio",
+      "messagePlaceholder": "Raccontaci i tuoi piani...",
+      "submit": "Invia Messaggio",
+      "submitting": "Apertura Email..."
+    },
+    "success": {
+      "title": "Grazie!",
+      "message": "Ti risponderemo al più presto."
+    },
+    "emailSubject": "Richiesta Prenotazione"
+  },
+  "Footer": {
+    "description": "Un rifugio di lusso sul tetto nel cuore di Roma, a pochi passi dalla Stazione Termini.",
+    "quickLinks": "Link Rapidi",
+    "contact": "Contatti",
+    "bookNow": "Prenota",
+    "copyright": "Tutti i diritti riservati.",
+    "address": "Via Milazzo, 14 · 00185 Roma, Italia"
+  }
+}

@@ -2,17 +2,13 @@
 
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#apartment", label: "Apartment" },
-  { href: "#amenities", label: "Amenities" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#location", label: "Location" },
-  { href: "#contact", label: "Contact" },
-];
+const navLinkKeys = ["home", "apartment", "amenities", "gallery", "location"] as const;
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+  const tNav = useTranslations("Navbar");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -29,30 +25,35 @@ export default function Footer() {
               className="h-[77px] w-auto dark:brightness-0 dark:invert mb-4"
             />
             <p className="text-neutral-500 dark:text-white/50 text-sm leading-relaxed">
-              A luxury rooftop retreat in the heart of Rome, steps from
-              Termini Station.
+              {t("description")}
             </p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-neutral-950 dark:text-white font-medium mb-4">Quick Links</h4>
+            <h4 className="text-neutral-950 dark:text-white font-medium mb-4">{t("quickLinks")}</h4>
             <nav className="grid grid-cols-2 gap-2">
-              {navLinks.map((link) => (
+              {navLinkKeys.map((key) => (
                 <a
-                  key={link.href}
-                  href={link.href}
+                  key={key}
+                  href={`#${key === "apartment" ? "apartment" : key}`}
                   className="text-sm text-neutral-500 dark:text-white/50 hover:text-gold-500 dark:hover:text-gold-400 transition-colors py-1"
                 >
-                  {link.label}
+                  {tNav(key)}
                 </a>
               ))}
+              <a
+                href="#contact"
+                className="text-sm text-neutral-500 dark:text-white/50 hover:text-gold-500 dark:hover:text-gold-400 transition-colors py-1"
+              >
+                {t("contact")}
+              </a>
             </nav>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-neutral-950 dark:text-white font-medium mb-4">Contact</h4>
+            <h4 className="text-neutral-950 dark:text-white font-medium mb-4">{t("contact")}</h4>
             <div className="space-y-3 text-sm text-neutral-500 dark:text-white/50">
               <a href="mailto:info@6altop.com" className="block hover:text-gold-500 dark:hover:text-gold-400 transition-colors">
                 info@6altop.com
@@ -65,7 +66,7 @@ export default function Footer() {
               href="#contact"
               className="inline-flex items-center gap-2 mt-6 text-sm text-gold-500 dark:text-gold-400 hover:text-gold-600 dark:hover:text-gold-300 transition-colors group"
             >
-              Book Now
+              {t("bookNow")}
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
@@ -74,10 +75,10 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-neutral-400 dark:text-white/30">
-            &copy; {currentYear} 6 Al Top. All rights reserved.
+            &copy; {currentYear} 6 Al Top. {t("copyright")}
           </p>
           <p className="text-sm text-neutral-400 dark:text-white/30">
-            Via Milazzo, 14 &middot; 00185 Roma, Italia
+            {t("address")}
           </p>
         </div>
       </div>

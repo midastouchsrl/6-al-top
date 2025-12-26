@@ -1,0 +1,179 @@
+{
+  "Metadata": {
+    "title": "6 Al Top | Luxury Apartment in Rome",
+    "description": "Experience Rome from above. A designer suite on the 6th floor with panoramic views, steps from Rome's iconic landmarks."
+  },
+  "Navbar": {
+    "home": "Home",
+    "apartment": "Apartment",
+    "amenities": "Amenities",
+    "gallery": "Gallery",
+    "location": "Location",
+    "bookNow": "Book Now"
+  },
+  "Hero": {
+    "badge": {
+      "rome": "Rome, Italy",
+      "rating": "5.0 Rating"
+    },
+    "title": {
+      "line1": "Live Above",
+      "line2": "The Eternal City"
+    },
+    "subtitle": "A designer suite on the 6th floor with panoramic views, steps from Rome's iconic landmarks",
+    "buttons": {
+      "explore": "Explore",
+      "book": "Book Your Stay"
+    },
+    "stats": {
+      "floor": "Floor",
+      "toTermini": "to Termini",
+      "guestRating": "Guest Rating"
+    }
+  },
+  "About": {
+    "label": "The Experience",
+    "title": {
+      "line1": "Refined Living in the",
+      "line2": "Heart of Rome"
+    },
+    "description1": "6 Al Top is more than accommodation—it's an immersive experience. Our meticulously designed retreat combines contemporary luxury with authentic Roman character.",
+    "description2": "Every element has been thoughtfully curated: from the custom Italian furnishings to the state-of-the-art amenities, creating a space that feels both sophisticated and welcoming.",
+    "features": {
+      "designer": "Designer furnishings throughout",
+      "windows": "Floor-to-ceiling windows",
+      "smart": "Smart home technology",
+      "sound": "Premium sound system"
+    },
+    "button": "View Gallery"
+  },
+  "Amenities": {
+    "label": "What We Offer",
+    "title": {
+      "line1": "Premium",
+      "line2": "Amenities"
+    },
+    "subtitle": "Every detail designed for your comfort and convenience.",
+    "items": {
+      "jacuzzi": {
+        "title": "Jacuzzi",
+        "description": "28-jet hydromassage with chromotherapy"
+      },
+      "shower": {
+        "title": "Spa Shower",
+        "description": "Multi-jet rainfall experience"
+      },
+      "tv": {
+        "title": "4K Entertainment",
+        "description": "55\" + 50\" TVs with Sky & Netflix"
+      },
+      "fireplace": {
+        "title": "Fireplace",
+        "description": "Eco-friendly bioethanol design"
+      },
+      "climate": {
+        "title": "Climate",
+        "description": "Smart AC & heating control"
+      },
+      "kitchen": {
+        "title": "Kitchen",
+        "description": "Full appliances & espresso machine"
+      },
+      "wifi": {
+        "title": "Fast WiFi",
+        "description": "Fiber-optic connection"
+      },
+      "linens": {
+        "title": "Luxury Linens",
+        "description": "Egyptian cotton bedding"
+      }
+    }
+  },
+  "Gallery": {
+    "label": "Visual Tour",
+    "title": {
+      "line1": "Explore",
+      "line2": "The Space"
+    },
+    "subtitle": "Step inside our meticulously designed retreat.",
+    "view": "View"
+  },
+  "Location": {
+    "label": "Location",
+    "title": {
+      "line1": "In the Heart of",
+      "line2": "Rome"
+    },
+    "description": "Strategically located on Via Milazzo, just steps from Termini Station. Rome's greatest treasures are at your doorstep.",
+    "highlights": {
+      "termini": {
+        "title": "Termini Station",
+        "subtitle": "2 min walk"
+      },
+      "colosseum": {
+        "title": "Colosseum",
+        "subtitle": "10 min"
+      },
+      "vatican": {
+        "title": "Vatican",
+        "subtitle": "15 min"
+      },
+      "restaurants": {
+        "title": "Restaurants",
+        "subtitle": "Everywhere"
+      }
+    },
+    "address": {
+      "label": "Address",
+      "street": "Via Milazzo, 14",
+      "city": "00185 Roma, Italia"
+    }
+  },
+  "Contact": {
+    "label": "Get in Touch",
+    "title": {
+      "line1": "Book Your",
+      "line2": "Stay"
+    },
+    "subtitle": "Ready to experience Rome from above? Contact us for availability.",
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "fastResponse": "Fast Response",
+      "responseTime": "We typically reply within 2 hours during business hours."
+    },
+    "bookDirectly": "Book directly",
+    "buttons": {
+      "booking": "Booking",
+      "whatsapp": "WhatsApp"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 234 567 890",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "selectDate": "Select date",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your plans...",
+      "submit": "Send Message",
+      "submitting": "Opening Email..."
+    },
+    "success": {
+      "title": "Thank You!",
+      "message": "We'll get back to you shortly."
+    },
+    "emailSubject": "Booking Inquiry"
+  },
+  "Footer": {
+    "description": "A luxury rooftop retreat in the heart of Rome, steps from Termini Station.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "bookNow": "Book Now",
+    "copyright": "All rights reserved.",
+    "address": "Via Milazzo, 14 · 00185 Roma, Italia"
+  }
+}

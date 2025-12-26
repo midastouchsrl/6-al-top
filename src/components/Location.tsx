@@ -4,15 +4,17 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { MapPin, Train, Clock, Utensils, Navigation } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const highlights = [
-  { icon: Train, title: "Termini Station", subtitle: "2 min walk" },
-  { icon: Clock, title: "Colosseum", subtitle: "10 min" },
-  { icon: Navigation, title: "Vatican", subtitle: "15 min" },
-  { icon: Utensils, title: "Restaurants", subtitle: "Everywhere" },
-];
+const highlightConfig = [
+  { key: "termini", icon: Train },
+  { key: "colosseum", icon: Clock },
+  { key: "vatican", icon: Navigation },
+  { key: "restaurants", icon: Utensils },
+] as const;
 
 export default function Location() {
+  const t = useTranslations("Location");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -26,23 +28,22 @@ export default function Location() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <span className="text-label mb-4 block">Location</span>
+            <span className="text-label mb-4 block">{t("label")}</span>
             <h2 className="heading-section text-neutral-950 dark:text-white mb-6">
-              In the Heart of
+              {t("title.line1")}
               <br />
-              <span className="text-gradient">Rome</span>
+              <span className="text-gradient">{t("title.line2")}</span>
             </h2>
 
             <p className="text-neutral-600 dark:text-white/60 leading-relaxed mb-8 text-lg">
-              Strategically located on Via Milazzo, just steps from Termini Station.
-              Rome&apos;s greatest treasures are at your doorstep.
+              {t("description")}
             </p>
 
             {/* Highlights Grid */}
             <div className="grid grid-cols-2 gap-4 mb-10">
-              {highlights.map((item, index) => (
+              {highlightConfig.map((item, index) => (
                 <motion.div
-                  key={item.title}
+                  key={item.key}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
@@ -52,8 +53,12 @@ export default function Location() {
                     <item.icon className="w-5 h-5 text-gold-500 dark:text-gold-400" />
                   </div>
                   <div>
-                    <div className="text-neutral-950 dark:text-white font-medium text-sm">{item.title}</div>
-                    <div className="text-neutral-500 dark:text-white/50 text-xs">{item.subtitle}</div>
+                    <div className="text-neutral-950 dark:text-white font-medium text-sm">
+                      {t(`highlights.${item.key}.title`)}
+                    </div>
+                    <div className="text-neutral-500 dark:text-white/50 text-xs">
+                      {t(`highlights.${item.key}.subtitle`)}
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -70,9 +75,9 @@ export default function Location() {
                 <MapPin className="w-6 h-6 text-gold-500 dark:text-gold-400" />
               </div>
               <div>
-                <div className="text-neutral-950 dark:text-white font-medium mb-1">Address</div>
-                <div className="text-neutral-600 dark:text-white/60">Via Milazzo, 14</div>
-                <div className="text-neutral-600 dark:text-white/60">00185 Roma, Italia</div>
+                <div className="text-neutral-950 dark:text-white font-medium mb-1">{t("address.label")}</div>
+                <div className="text-neutral-600 dark:text-white/60">{t("address.street")}</div>
+                <div className="text-neutral-600 dark:text-white/60">{t("address.city")}</div>
               </div>
             </motion.div>
           </motion.div>

@@ -6,8 +6,11 @@ import { useRef, useState } from "react";
 import { Mail, Phone, Send, CheckCircle, ArrowRight, Calendar, MessageCircle } from "lucide-react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Contact() {
+  const t = useTranslations("Contact");
+  const locale = useLocale();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [formState, setFormState] = useState({
@@ -23,7 +26,7 @@ export default function Contact() {
 
   const formatDate = (date: Date | null) => {
     if (!date) return "";
-    return date.toLocaleDateString("en-US", {
+    return date.toLocaleDateString(locale === "it" ? "it-IT" : "en-US", {
       day: "numeric",
       month: "long",
       year: "numeric",
@@ -36,22 +39,22 @@ export default function Contact() {
 
     // Compose email body
     const emailBody = `
-New Booking Inquiry from 6 Al Top Website
+${locale === "it" ? "Nuova Richiesta di Prenotazione dal sito 6 Al Top" : "New Booking Inquiry from 6 Al Top Website"}
 
-Name: ${formState.name}
-Email: ${formState.email}
-Phone: ${formState.phone || "Not provided"}
+${t("form.name")}: ${formState.name}
+${t("form.email")}: ${formState.email}
+${t("form.phone")}: ${formState.phone || (locale === "it" ? "Non fornito" : "Not provided")}
 
-Check-in: ${formatDate(checkIn) || "Not specified"}
-Check-out: ${formatDate(checkOut) || "Not specified"}
+${t("form.checkIn")}: ${formatDate(checkIn) || (locale === "it" ? "Non specificato" : "Not specified")}
+${t("form.checkOut")}: ${formatDate(checkOut) || (locale === "it" ? "Non specificato" : "Not specified")}
 
-Message:
+${t("form.message")}:
 ${formState.message}
     `.trim();
 
     // Open mailto with precompiled data
     const mailtoLink = `mailto:info@6altop.com?subject=${encodeURIComponent(
-      `Booking Inquiry - ${formState.name}`
+      `${t("emailSubject")} - ${formState.name}`
     )}&body=${encodeURIComponent(emailBody)}`;
 
     window.location.href = mailtoLink;
@@ -81,12 +84,12 @@ ${formState.message}
           transition={{ duration: 0.8 }}
           className="text-center mb-16 md:mb-20 max-w-2xl mx-auto"
         >
-          <span className="text-label mb-4 block">Get in Touch</span>
+          <span className="text-label mb-4 block">{t("label")}</span>
           <h2 className="heading-section text-neutral-950 dark:text-white mb-6">
-            Book Your <span className="text-gradient">Stay</span>
+            {t("title.line1")} <span className="text-gradient">{t("title.line2")}</span>
           </h2>
           <p className="text-neutral-600 dark:text-white/60">
-            Ready to experience Rome from above? Contact us for availability.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -106,7 +109,7 @@ ${formState.message}
                 <Mail className="w-6 h-6 text-gold-500 dark:text-gold-400" />
               </div>
               <div>
-                <div className="text-sm text-neutral-500 dark:text-white/50 mb-1">Email</div>
+                <div className="text-sm text-neutral-500 dark:text-white/50 mb-1">{t("info.email")}</div>
                 <div className="text-neutral-950 dark:text-white font-medium group-hover:text-gold-500 dark:group-hover:text-gold-400 transition-colors">
                   info@6altop.com
                 </div>
@@ -122,7 +125,7 @@ ${formState.message}
                 <Phone className="w-6 h-6 text-gold-500 dark:text-gold-400" />
               </div>
               <div>
-                <div className="text-sm text-neutral-500 dark:text-white/50 mb-1">Phone</div>
+                <div className="text-sm text-neutral-500 dark:text-white/50 mb-1">{t("info.phone")}</div>
                 <div className="text-neutral-950 dark:text-white font-medium group-hover:text-gold-500 dark:group-hover:text-gold-400 transition-colors">
                   +39 327 7293 390
                 </div>
@@ -132,15 +135,15 @@ ${formState.message}
 
             <div className="card-glass p-6 bg-gold-500/5 dark:bg-gold-400/5 border-gold-500/10 dark:border-gold-400/10">
               <p className="text-neutral-600 dark:text-white/70 text-sm leading-relaxed">
-                <span className="text-gold-500 dark:text-gold-400 font-semibold">Fast Response</span>
+                <span className="text-gold-500 dark:text-gold-400 font-semibold">{t("info.fastResponse")}</span>
                 <br />
-                We typically reply within 2 hours during business hours.
+                {t("info.responseTime")}
               </p>
             </div>
 
             {/* Quick Book Buttons */}
             <div className="card-glass p-6">
-              <p className="text-sm text-neutral-500 dark:text-white/50 mb-4">Book directly</p>
+              <p className="text-sm text-neutral-500 dark:text-white/50 mb-4">{t("bookDirectly")}</p>
               <div className="flex gap-3">
                 <a
                   href="https://www.booking.com/Share-IoeoDd8"
@@ -149,7 +152,7 @@ ${formState.message}
                   className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#003580] hover:bg-[#00264d] rounded-xl text-white font-medium shadow-lg shadow-[#003580]/25 hover:shadow-[#003580]/40 hover:scale-[1.02] transition-all duration-300"
                 >
                   <Calendar className="w-5 h-5" />
-                  <span>Booking</span>
+                  <span>{t("buttons.booking")}</span>
                 </a>
                 <a
                   href="https://wa.me/393277293390?text=Hi!%20I%27m%20interested%20in%20booking%206%20Al%20Top%20apartment."
@@ -158,7 +161,7 @@ ${formState.message}
                   className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#25D366] hover:bg-[#1fb855] rounded-xl text-white font-medium shadow-lg shadow-[#25D366]/25 hover:shadow-[#25D366]/40 hover:scale-[1.02] transition-all duration-300"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  <span>WhatsApp</span>
+                  <span>{t("buttons.whatsapp")}</span>
                 </a>
               </div>
             </div>
@@ -182,10 +185,10 @@ ${formState.message}
                     <CheckCircle className="w-10 h-10 text-gold-500 dark:text-gold-400" />
                   </div>
                   <h4 className="text-2xl font-display font-semibold text-neutral-950 dark:text-white mb-2">
-                    Thank You!
+                    {t("success.title")}
                   </h4>
                   <p className="text-neutral-600 dark:text-white/60">
-                    We&apos;ll get back to you shortly.
+                    {t("success.message")}
                   </p>
                 </motion.div>
               ) : (
@@ -193,7 +196,7 @@ ${formState.message}
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
                       <label htmlFor="name" className="block text-sm text-neutral-500 dark:text-white/60 mb-2">
-                        Name *
+                        {t("form.name")} *
                       </label>
                       <input
                         type="text"
@@ -202,12 +205,12 @@ ${formState.message}
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                         className="w-full px-5 py-4 bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 rounded-xl text-neutral-950 dark:text-white placeholder-neutral-400 dark:placeholder-white/30 focus:border-gold-500/50 dark:focus:border-gold-400/50 focus:bg-white dark:focus:bg-white/[0.05] focus:outline-none transition-all"
-                        placeholder="John Doe"
+                        placeholder={t("form.namePlaceholder")}
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm text-neutral-500 dark:text-white/60 mb-2">
-                        Email *
+                        {t("form.email")} *
                       </label>
                       <input
                         type="email"
@@ -216,14 +219,14 @@ ${formState.message}
                         value={formState.email}
                         onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                         className="w-full px-5 py-4 bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 rounded-xl text-neutral-950 dark:text-white placeholder-neutral-400 dark:placeholder-white/30 focus:border-gold-500/50 dark:focus:border-gold-400/50 focus:bg-white dark:focus:bg-white/[0.05] focus:outline-none transition-all"
-                        placeholder="john@example.com"
+                        placeholder={t("form.emailPlaceholder")}
                       />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="phone" className="block text-sm text-neutral-500 dark:text-white/60 mb-2">
-                      Phone
+                      {t("form.phone")}
                     </label>
                     <input
                       type="tel"
@@ -231,7 +234,7 @@ ${formState.message}
                       value={formState.phone}
                       onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                       className="w-full px-5 py-4 bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 rounded-xl text-neutral-950 dark:text-white placeholder-neutral-400 dark:placeholder-white/30 focus:border-gold-500/50 dark:focus:border-gold-400/50 focus:bg-white dark:focus:bg-white/[0.05] focus:outline-none transition-all"
-                      placeholder="+1 234 567 890"
+                      placeholder={t("form.phonePlaceholder")}
                     />
                   </div>
 
@@ -240,7 +243,7 @@ ${formState.message}
                     <div>
                       <label className="block text-sm text-neutral-500 dark:text-white/60 mb-2">
                         <Calendar className="w-4 h-4 inline-block mr-1.5 -mt-0.5" />
-                        Check-in
+                        {t("form.checkIn")}
                       </label>
                       <DatePicker
                         selected={checkIn}
@@ -249,15 +252,16 @@ ${formState.message}
                         startDate={checkIn}
                         endDate={checkOut}
                         minDate={new Date()}
-                        placeholderText="Select date"
+                        placeholderText={t("form.selectDate")}
                         dateFormat="dd MMM yyyy"
+                        locale={locale === "it" ? "it" : "en"}
                         className="w-full px-5 py-4 bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 rounded-xl text-neutral-950 dark:text-white placeholder-neutral-400 dark:placeholder-white/30 focus:border-gold-500/50 dark:focus:border-gold-400/50 focus:bg-white dark:focus:bg-white/[0.05] focus:outline-none transition-all cursor-pointer"
                       />
                     </div>
                     <div>
                       <label className="block text-sm text-neutral-500 dark:text-white/60 mb-2">
                         <Calendar className="w-4 h-4 inline-block mr-1.5 -mt-0.5" />
-                        Check-out
+                        {t("form.checkOut")}
                       </label>
                       <DatePicker
                         selected={checkOut}
@@ -266,8 +270,9 @@ ${formState.message}
                         startDate={checkIn}
                         endDate={checkOut}
                         minDate={checkIn || new Date()}
-                        placeholderText="Select date"
+                        placeholderText={t("form.selectDate")}
                         dateFormat="dd MMM yyyy"
+                        locale={locale === "it" ? "it" : "en"}
                         className="w-full px-5 py-4 bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 rounded-xl text-neutral-950 dark:text-white placeholder-neutral-400 dark:placeholder-white/30 focus:border-gold-500/50 dark:focus:border-gold-400/50 focus:bg-white dark:focus:bg-white/[0.05] focus:outline-none transition-all cursor-pointer"
                       />
                     </div>
@@ -275,7 +280,7 @@ ${formState.message}
 
                   <div>
                     <label htmlFor="message" className="block text-sm text-neutral-500 dark:text-white/60 mb-2">
-                      Message *
+                      {t("form.message")} *
                     </label>
                     <textarea
                       id="message"
@@ -284,7 +289,7 @@ ${formState.message}
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                       className="w-full px-5 py-4 bg-neutral-100 dark:bg-white/[0.03] border border-neutral-200 dark:border-white/10 rounded-xl text-neutral-950 dark:text-white placeholder-neutral-400 dark:placeholder-white/30 focus:border-gold-500/50 dark:focus:border-gold-400/50 focus:bg-white dark:focus:bg-white/[0.05] focus:outline-none transition-all resize-none"
-                      placeholder="Tell us about your plans..."
+                      placeholder={t("form.messagePlaceholder")}
                     />
                   </div>
 
@@ -293,7 +298,7 @@ ${formState.message}
                     className="btn-primary w-full group"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Opening Email..." : "Send Message"}
+                    {isSubmitting ? t("form.submitting") : t("form.submit")}
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </form>
