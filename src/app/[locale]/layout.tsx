@@ -176,6 +176,11 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${sora.variable} ${dmSans.variable} dark`} suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+        <link rel="icon" href="/icon-512.png" type="image/png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="preload" href="/hero-bg.webp" as="image" type="image/webp" />
         <link rel="alternate" hrefLang="it" href="https://www.6altop.com/" />
         <link rel="alternate" hrefLang="en" href="https://www.6altop.com/en" />
