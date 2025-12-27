@@ -39,37 +39,35 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Compose email body
-    const emailBody = `
-${locale === "it" ? "Nuova Richiesta di Prenotazione dal sito 6 Al Top" : "New Booking Inquiry from 6 Al Top Website"}
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          phone: formState.phone,
+          checkIn: formatDate(checkIn),
+          checkOut: formatDate(checkOut),
+          message: formState.message,
+          locale,
+        }),
+      });
 
-${t("form.name")}: ${formState.name}
-${t("form.email")}: ${formState.email}
-${t("form.phone")}: ${formState.phone || (locale === "it" ? "Non fornito" : "Not provided")}
+      if (!response.ok) throw new Error('Failed to send');
 
-${t("form.checkIn")}: ${formatDate(checkIn) || (locale === "it" ? "Non specificato" : "Not specified")}
-${t("form.checkOut")}: ${formatDate(checkOut) || (locale === "it" ? "Non specificato" : "Not specified")}
-
-${t("form.message")}:
-${formState.message}
-    `.trim();
-
-    // Open mailto with precompiled data
-    const mailtoLink = `mailto:info@6altop.com?subject=${encodeURIComponent(
-      `${t("emailSubject")} - ${formState.name}`
-    )}&body=${encodeURIComponent(emailBody)}`;
-
-    window.location.href = mailtoLink;
-
-    // Show success state
-    setTimeout(() => {
-      setIsSubmitting(false);
       setIsSubmitted(true);
       setFormState({ name: "", email: "", phone: "", message: "" });
       setCheckIn(null);
       setCheckOut(null);
+      setPrivacyConsent(false);
       setTimeout(() => setIsSubmitted(false), 5000);
-    }, 500);
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert(locale === "it" ? "Errore nell'invio. Riprova o contattaci via WhatsApp." : "Error sending. Please try again or contact us via WhatsApp.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
