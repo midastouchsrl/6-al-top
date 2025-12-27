@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, MapPin, Star } from "lucide-react";
+import { ArrowDown, Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function Hero() {
@@ -25,27 +25,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% via-neutral-50/50 via-80% to-neutral-50 dark:via-neutral-950/50 dark:to-neutral-950" />
         <div className="absolute inset-0 bg-grid opacity-30" />
       </div>
-
-      {/* Floating badges */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="absolute top-32 left-8 md:left-16 hidden md:flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-white/10 backdrop-blur-md rounded-full border border-black/10 dark:border-white/10"
-      >
-        <MapPin className="w-4 h-4 text-gold-500 dark:text-gold-400" />
-        <span className="text-sm text-white/80">{t("badge.rome")}</span>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.4, duration: 0.6 }}
-        className="absolute top-32 right-8 md:right-16 hidden md:flex items-center gap-2 px-4 py-2 bg-black/10 dark:bg-white/10 backdrop-blur-md rounded-full border border-black/10 dark:border-white/10"
-      >
-        <Star className="w-4 h-4 text-gold-500 dark:text-gold-400 fill-gold-500 dark:fill-gold-400" />
-        <span className="text-sm text-white/80">{t("badge.rating")}</span>
-      </motion.div>
 
       {/* Content */}
       <div className="relative z-10 text-center container-custom">

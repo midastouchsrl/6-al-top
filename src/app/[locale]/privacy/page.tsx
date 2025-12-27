@@ -75,9 +75,8 @@ export default async function PrivacyPage({ params }: Props) {
 
               <h2>Cookie Policy</h2>
               <p>
-                Questo sito utilizza cookie tecnici necessari per il corretto funzionamento
-                del sito. Non vengono utilizzati cookie di profilazione o di terze parti
-                per finalità pubblicitarie.
+                Questo sito utilizza esclusivamente cookie tecnici necessari per il corretto
+                funzionamento. <strong>Non utilizziamo cookie di profilazione, analytics o di terze parti.</strong>
               </p>
 
               <h3>Cosa sono i Cookie</h3>
@@ -88,10 +87,15 @@ export default async function PrivacyPage({ params }: Props) {
               </p>
 
               <h3>Cookie Utilizzati</h3>
+              <p>Utilizziamo solo cookie tecnici strettamente necessari:</p>
               <ul>
-                <li><strong>Cookie tecnici:</strong> necessari per la navigazione e il funzionamento del sito</li>
-                <li><strong>Cookie di preferenza:</strong> memorizzano le preferenze dell&apos;utente (es. tema chiaro/scuro, lingua)</li>
+                <li><strong>Preferenza tema:</strong> memorizza la scelta tema chiaro/scuro (localStorage)</li>
+                <li><strong>Preferenza lingua:</strong> memorizza la lingua selezionata (IT/EN)</li>
               </ul>
+              <p>
+                Questi cookie sono esenti dall&apos;obbligo di consenso in quanto necessari per
+                erogare il servizio richiesto dall&apos;utente (art. 122 D.Lgs. 196/2003).
+              </p>
 
               <p className="text-sm text-neutral-500 dark:text-white/50 mt-8">
                 Ultimo aggiornamento: Dicembre 2025
@@ -143,9 +147,8 @@ export default async function PrivacyPage({ params }: Props) {
 
               <h2>Cookie Policy</h2>
               <p>
-                This website uses technical cookies necessary for the proper functioning
-                of the site. No profiling cookies or third-party cookies for advertising
-                purposes are used.
+                This website uses only technical cookies necessary for proper functioning.
+                <strong> We do not use profiling, analytics, or third-party cookies.</strong>
               </p>
 
               <h3>What are Cookies</h3>
@@ -156,10 +159,15 @@ export default async function PrivacyPage({ params }: Props) {
               </p>
 
               <h3>Cookies Used</h3>
+              <p>We only use strictly necessary technical cookies:</p>
               <ul>
-                <li><strong>Technical cookies:</strong> necessary for navigation and website functionality</li>
-                <li><strong>Preference cookies:</strong> store user preferences (e.g., light/dark theme, language)</li>
+                <li><strong>Theme preference:</strong> stores light/dark theme choice (localStorage)</li>
+                <li><strong>Language preference:</strong> stores selected language (IT/EN)</li>
               </ul>
+              <p>
+                These cookies are exempt from consent requirements as they are necessary
+                to provide the service requested by the user (GDPR Art. 6(1)(b)).
+              </p>
 
               <p className="text-sm text-neutral-500 dark:text-white/50 mt-8">
                 Last updated: December 2025

@@ -141,29 +141,27 @@ ${formState.message}
               </p>
             </div>
 
-            {/* Quick Book Buttons */}
+            {/* Quick Book Button */}
             <div className="card-glass p-6">
               <p className="text-sm text-neutral-500 dark:text-white/50 mb-4">{t("bookDirectly")}</p>
-              <div className="flex gap-3">
-                <a
-                  href="https://www.booking.com/Share-IoeoDd8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#003580] hover:bg-[#00264d] rounded-xl text-white font-medium shadow-lg shadow-[#003580]/25 hover:shadow-[#003580]/40 hover:scale-[1.02] transition-all duration-300"
-                >
-                  <Calendar className="w-5 h-5" />
-                  <span>{t("buttons.booking")}</span>
-                </a>
-                <a
-                  href="https://wa.me/393277293390?text=Hi!%20I%27m%20interested%20in%20booking%206%20Al%20Top%20apartment."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#25D366] hover:bg-[#1fb855] rounded-xl text-white font-medium shadow-lg shadow-[#25D366]/25 hover:shadow-[#25D366]/40 hover:scale-[1.02] transition-all duration-300"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  <span>{t("buttons.whatsapp")}</span>
-                </a>
-              </div>
+              <a
+                href="https://wa.me/393277293390?text=Hi!%20I%27m%20interested%20in%20booking%206%20Al%20Top%20apartment."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#25D366] hover:bg-[#1fb855] rounded-xl text-white font-medium shadow-lg shadow-[#25D366]/25 hover:shadow-[#25D366]/40 hover:scale-[1.02] transition-all duration-300"
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span>{t("buttons.whatsapp")}</span>
+              </a>
+              <a
+                href="https://www.booking.com/Share-IoeoDd8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 w-full inline-flex items-center justify-center gap-1.5 text-xs text-neutral-400 dark:text-white/40 hover:text-neutral-600 dark:hover:text-white/60 transition-colors"
+              >
+                <span>{t("buttons.bookingReviews")}</span>
+                <ArrowRight className="w-3 h-3" />
+              </a>
             </div>
           </motion.div>
 

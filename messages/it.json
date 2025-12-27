@@ -146,7 +146,8 @@
     "bookDirectly": "Prenota direttamente",
     "buttons": {
       "booking": "Booking",
-      "whatsapp": "WhatsApp"
+      "whatsapp": "WhatsApp",
+      "bookingReviews": "Vedi le recensioni su Booking.com"
     },
     "form": {
       "name": "Nome",

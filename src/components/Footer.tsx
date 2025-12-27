@@ -2,13 +2,15 @@
 
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 
 const navLinkKeys = ["home", "apartment", "amenities", "gallery", "location"] as const;
 
 export default function Footer() {
   const t = useTranslations("Footer");
   const tNav = useTranslations("Navbar");
+  const locale = useLocale();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -78,9 +80,9 @@ export default function Footer() {
             <p>{t("owner")}</p>
             <p>{t("cf")}</p>
             <p>{t("cin")}</p>
-            <a href="/privacy" className="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">
+            <Link href={`/${locale}/privacy`} className="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">
               {t("privacy")}
-            </a>
+            </Link>
           </div>
         </div>
 
