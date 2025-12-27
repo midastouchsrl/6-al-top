@@ -72,7 +72,7 @@ export default function Hero() {
           {[
             { value: t("stats.floorValue"), label: t("stats.floor") },
             { value: "2min", label: t("stats.toTermini") },
-            { value: "4.9", label: t("stats.guestRating"), showStar: true },
+            { value: "9.8", label: t("stats.guestRating"), showStar: true },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl md:text-3xl font-display font-semibold text-white flex items-center justify-center gap-1">
