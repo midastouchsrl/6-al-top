@@ -163,6 +163,8 @@
       "selectDate": "Seleziona data",
       "message": "Messaggio",
       "messagePlaceholder": "Raccontaci i tuoi piani...",
+      "privacyConsent": "Acconsento al trattamento dei miei dati personali secondo l'",
+      "privacyLink": "informativa privacy",
       "submit": "Invia Messaggio",
       "submitting": "Apertura Email..."
     },

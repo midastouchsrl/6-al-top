@@ -7,6 +7,7 @@ import { Mail, Phone, Send, CheckCircle, ArrowRight, Calendar, MessageCircle, Ex
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 
 export default function Contact() {
   const t = useTranslations("Contact");
@@ -23,6 +24,7 @@ export default function Contact() {
   const [checkOut, setCheckOut] = useState<Date | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [privacyConsent, setPrivacyConsent] = useState(false);
 
   const formatDate = (date: Date | null) => {
     if (!date) return "";
@@ -296,10 +298,32 @@ ${formState.message}
                     />
                   </div>
 
+                  {/* Privacy Consent */}
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="privacy"
+                      checked={privacyConsent}
+                      onChange={(e) => setPrivacyConsent(e.target.checked)}
+                      className="mt-1 w-4 h-4 rounded border-neutral-300 dark:border-white/20 text-gold-500 focus:ring-gold-500 dark:focus:ring-gold-400 bg-neutral-100 dark:bg-white/[0.03]"
+                      required
+                    />
+                    <label htmlFor="privacy" className="text-sm text-neutral-500 dark:text-white/50">
+                      {t("form.privacyConsent")}{" "}
+                      <Link
+                        href={`/${locale}/privacy`}
+                        target="_blank"
+                        className="text-gold-500 dark:text-gold-400 hover:underline"
+                      >
+                        {t("form.privacyLink")}
+                      </Link>
+                    </label>
+                  </div>
+
                   <button
                     type="submit"
                     className="btn-primary w-full group text-white"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !privacyConsent}
                   >
                     {isSubmitting ? t("form.submitting") : t("form.submit")}
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -163,6 +163,8 @@
       "selectDate": "Select date",
       "message": "Message",
       "messagePlaceholder": "Tell us about your plans...",
+      "privacyConsent": "I consent to the processing of my personal data according to the",
+      "privacyLink": "privacy policy",
       "submit": "Send Message",
       "submitting": "Opening Email..."
     },
