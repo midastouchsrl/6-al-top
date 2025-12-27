@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "6 Al Top | Appartamento di Lusso a Roma",
-    "description": "Vivi Roma dall'alto. Una suite di design al 6° piano con vista panoramica, a pochi passi dai monumenti iconici di Roma."
+    "description": "Una suite di design al 6° piano, a pochi passi dai monumenti iconici di Roma."
   },
   "Navbar": {
     "home": "Home",
@@ -17,15 +17,16 @@
       "rating": "Valutazione 5.0"
     },
     "title": {
-      "line1": "Vivi Sopra",
-      "line2": "La Città Eterna"
+      "line1": "Stile. Comfort.",
+      "line2": "Roma."
     },
-    "subtitle": "Una suite di design al 6° piano con vista panoramica, a pochi passi dai monumenti iconici di Roma",
+    "subtitle": "Una suite di design al 6° piano, a pochi passi dai monumenti iconici di Roma",
     "buttons": {
       "explore": "Esplora",
       "book": "Prenota il Tuo Soggiorno"
     },
     "stats": {
+      "floorValue": "6°",
       "floor": "Piano",
       "toTermini": "da Termini",
       "guestRating": "Valutazione Ospiti"
@@ -135,7 +136,7 @@
       "line1": "Prenota il Tuo",
       "line2": "Soggiorno"
     },
-    "subtitle": "Pronto a vivere Roma dall'alto? Contattaci per la disponibilità.",
+    "subtitle": "Pronto a vivere Roma con stile? Contattaci per la disponibilità.",
     "info": {
       "email": "Email",
       "phone": "Telefono",

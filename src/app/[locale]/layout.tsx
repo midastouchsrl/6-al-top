@@ -38,8 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? "6 Al Top | Appartamento di Lusso a Roma"
       : "6 Al Top | Luxury Apartment in Rome",
     description: isItalian
-      ? "Vivi Roma dall'alto. Una suite di design al 6° piano con vista panoramica, a pochi passi dai monumenti iconici di Roma."
-      : "Experience Rome from above. A designer suite on the 6th floor with panoramic views, steps from Rome's iconic landmarks.",
+      ? "Una suite di design al 6° piano, a pochi passi dai monumenti iconici di Roma."
+      : "A designer suite on the 6th floor, steps from Rome's iconic landmarks.",
     keywords: isItalian
       ? ["appartamento lusso Roma", "casa vacanze Roma", "alloggio Stazione Termini", "affitto lusso Roma", "suite rooftop Roma"]
       : ["Rome luxury apartment", "holiday home Rome", "Termini Station accommodation", "luxury rental Rome", "rooftop suite Rome"],
@@ -56,8 +56,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? "6 Al Top | Appartamento di Lusso a Roma"
         : "6 Al Top | Luxury Apartment in Rome",
       description: isItalian
-        ? "Vivi Roma dall'alto. Una suite di design al 6° piano con vista panoramica e servizi di prima classe."
-        : "Experience Rome from above. A designer suite with panoramic views and world-class amenities.",
+        ? "Una suite di design al 6° piano con servizi di prima classe, a pochi passi dai monumenti iconici di Roma."
+        : "A designer suite on the 6th floor with world-class amenities, steps from Rome's iconic landmarks.",
       url: `https://www.6altop.com/${locale === 'it' ? '' : 'en'}`,
       siteName: "6 Al Top",
       locale: isItalian ? "it_IT" : "en_US",
@@ -77,8 +77,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? "6 Al Top | Appartamento di Lusso a Roma"
         : "6 Al Top | Luxury Apartment in Rome",
       description: isItalian
-        ? "Vivi Roma dall'alto. Una suite di design al 6° piano con vista panoramica."
-        : "Experience Rome from above. A designer suite on the 6th floor with panoramic views.",
+        ? "Una suite di design al 6° piano, a pochi passi dai monumenti iconici di Roma."
+        : "A designer suite on the 6th floor, steps from Rome's iconic landmarks.",
       images: ["https://www.6altop.com/hero-bg.png"],
     },
     robots: {
@@ -104,8 +104,8 @@ function generateJsonLd(locale: string) {
     "@id": "https://www.6altop.com/#lodging",
     name: "6 Al Top",
     description: isItalian
-      ? "Appartamento di lusso al 6° piano nel cuore di Roma, a pochi passi dalla Stazione Termini. Suite di design con vista panoramica, jacuzzi e servizi premium."
-      : "Luxury apartment on the 6th floor in the heart of Rome, steps from Termini Station. Designer suite with panoramic views, jacuzzi and premium amenities.",
+      ? "Appartamento di lusso al 6° piano nel cuore di Roma, a pochi passi dalla Stazione Termini. Suite di design con jacuzzi e servizi premium."
+      : "Luxury apartment on the 6th floor in the heart of Rome, steps from Termini Station. Designer suite with jacuzzi and premium amenities.",
     url: `https://www.6altop.com/${locale === 'it' ? '' : 'en'}`,
     telephone: "+39 327 7293 390",
     email: "info@6altop.com",

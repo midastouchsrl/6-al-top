@@ -15,8 +15,10 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="apartment" className="section-padding bg-neutral-50 dark:bg-neutral-950 overflow-hidden transition-colors duration-300">
-      <div className="container-custom">
+    <section id="apartment" className="pt-8 md:pt-10 lg:pt-12 pb-24 md:pb-32 lg:pb-40 relative overflow-hidden transition-colors duration-300">
+      {/* Gradient overlay for smooth transition from hero */}
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-50/70 via-neutral-50 to-neutral-50 dark:from-neutral-950/70 dark:via-neutral-950 dark:to-neutral-950 pointer-events-none" />
+      <div className="container-custom relative z-10">
         <div ref={ref} className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
           <motion.div

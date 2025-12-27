@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-start justify-center pt-[20vh] overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">
@@ -22,7 +22,7 @@ export default function Hero() {
           }}
         />
         <div className="absolute inset-0 bg-neutral-950/60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-50 dark:to-neutral-950" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-50/70 dark:to-neutral-950/70" />
         <div className="absolute inset-0 bg-grid opacity-30" />
       </div>
 
@@ -91,7 +91,7 @@ export default function Hero() {
           className="mt-20 grid grid-cols-3 gap-8 max-w-md mx-auto"
         >
           {[
-            { value: "6th", label: t("stats.floor") },
+            { value: t("stats.floorValue"), label: t("stats.floor") },
             { value: "2min", label: t("stats.toTermini") },
             { value: "4.9", label: t("stats.guestRating"), showStar: true },
           ].map((stat) => (
@@ -111,7 +111,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="mt-12 inline-flex flex-col items-center gap-2 text-white/50 hover:text-gold-500 dark:hover:text-gold-400 transition-colors cursor-pointer"
+          className="mt-6 inline-flex flex-col items-center gap-2 text-white/50 hover:text-gold-500 dark:hover:text-gold-400 transition-colors cursor-pointer"
         >
           <motion.div
             animate={{ y: [0, 6, 0] }}

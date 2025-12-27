@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "6 Al Top | Luxury Apartment in Rome",
-    "description": "Experience Rome from above. A designer suite on the 6th floor with panoramic views, steps from Rome's iconic landmarks."
+    "description": "A designer suite on the 6th floor, steps from Rome's iconic landmarks."
   },
   "Navbar": {
     "home": "Home",
@@ -17,15 +17,16 @@
       "rating": "5.0 Rating"
     },
     "title": {
-      "line1": "Live Above",
-      "line2": "The Eternal City"
+      "line1": "Style. Comfort.",
+      "line2": "Rome."
     },
-    "subtitle": "A designer suite on the 6th floor with panoramic views, steps from Rome's iconic landmarks",
+    "subtitle": "A designer suite on the 6th floor, steps from Rome's iconic landmarks",
     "buttons": {
       "explore": "Explore",
       "book": "Book Your Stay"
     },
     "stats": {
+      "floorValue": "6th",
       "floor": "Floor",
       "toTermini": "to Termini",
       "guestRating": "Guest Rating"
@@ -135,7 +136,7 @@
       "line1": "Book Your",
       "line2": "Stay"
     },
-    "subtitle": "Ready to experience Rome from above? Contact us for availability.",
+    "subtitle": "Ready to experience Rome in style? Contact us for availability.",
     "info": {
       "email": "Email",
       "phone": "Phone",
