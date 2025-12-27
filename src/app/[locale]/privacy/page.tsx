@@ -33,8 +33,9 @@ export default async function PrivacyPage({ params }: Props) {
             <>
               <h2>Titolare del Trattamento</h2>
               <p>
-                <strong>Alessandro Massoli</strong><br />
-                Codice Fiscale: MSSLSN65T10H501K<br />
+                <strong>Marina Testa</strong><br />
+                Codice Fiscale: TSTMRN65S67H5L1J<br />
+                CIN: IT058091C22REDPDPQ<br />
                 Via Milazzo, 14 - 00185 Roma, Italia<br />
                 Email: info@6altop.com<br />
                 Telefono: +39 327 7293 390
@@ -105,8 +106,9 @@ export default async function PrivacyPage({ params }: Props) {
             <>
               <h2>Data Controller</h2>
               <p>
-                <strong>Alessandro Massoli</strong><br />
-                Tax Code: MSSLSN65T10H501K<br />
+                <strong>Marina Testa</strong><br />
+                Tax Code: TSTMRN65S67H5L1J<br />
+                CIN: IT058091C22REDPDPQ<br />
                 Via Milazzo, 14 - 00185 Rome, Italy<br />
                 Email: info@6altop.com<br />
                 Phone: +39 327 7293 390

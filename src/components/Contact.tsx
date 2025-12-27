@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Mail, Phone, Send, CheckCircle, ArrowRight, Calendar, MessageCircle } from "lucide-react";
+import { Mail, Phone, Send, CheckCircle, ArrowRight, Calendar, MessageCircle, ExternalLink } from "lucide-react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useTranslations, useLocale } from "next-intl";
@@ -133,34 +133,39 @@ ${formState.message}
               <ArrowRight className="w-5 h-5 text-neutral-400 dark:text-white/30 ml-auto group-hover:text-gold-500 dark:group-hover:text-gold-400 group-hover:translate-x-1 transition-all" />
             </a>
 
-            <div className="card-glass p-6 bg-gold-500/5 dark:bg-gold-400/5 border-gold-500/10 dark:border-gold-400/10">
-              <p className="text-neutral-600 dark:text-white/70 text-sm leading-relaxed">
-                <span className="text-gold-500 dark:text-gold-400 font-semibold">{t("info.fastResponse")}</span>
-                <br />
-                {t("info.responseTime")}
-              </p>
-            </div>
-
             {/* Quick Book Button */}
             <div className="card-glass p-6">
               <p className="text-sm text-neutral-500 dark:text-white/50 mb-4">{t("bookDirectly")}</p>
               <a
                 href="https://wa.me/393277293390?text=Hi!%20I%27m%20interested%20in%20booking%206%20Al%20Top%20apartment."
-                target="_blank"
+                target="_top"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#25D366] hover:bg-[#1fb855] rounded-xl text-white font-medium shadow-lg shadow-[#25D366]/25 hover:shadow-[#25D366]/40 hover:scale-[1.02] transition-all duration-300"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>{t("buttons.whatsapp")}</span>
               </a>
+            </div>
+
+            {/* Booking.com Credibility Card */}
+            <div className="card-glass p-6 border-[#003580]/20 dark:border-[#003580]/30">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="px-2 py-1 bg-[#003580] rounded-md">
+                  <span className="text-white font-bold text-sm">9.8</span>
+                </div>
+                <span className="text-sm font-semibold text-neutral-700 dark:text-white/80">{t("bookingExcellent")}</span>
+              </div>
+              <p className="text-xs text-neutral-500 dark:text-white/50 mb-4">
+                {t("bookingCredibility")}
+              </p>
               <a
-                href="https://www.booking.com/Share-IoeoDd8"
-                target="_blank"
+                href="https://www.booking.com/hotel/it/6-al-top.it.html"
+                target="_top"
                 rel="noopener noreferrer"
-                className="mt-3 w-full inline-flex items-center justify-center gap-1.5 text-xs text-neutral-400 dark:text-white/40 hover:text-neutral-600 dark:hover:text-white/60 transition-colors"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#003580] hover:bg-[#00224f] rounded-xl text-white font-medium transition-all duration-300 hover:scale-[1.02]"
               >
                 <span>{t("buttons.bookingReviews")}</span>
-                <ArrowRight className="w-3 h-3" />
+                <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </motion.div>
@@ -293,12 +298,18 @@ ${formState.message}
 
                   <button
                     type="submit"
-                    className="btn-primary w-full group"
+                    className="btn-primary w-full group text-white"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? t("form.submitting") : t("form.submit")}
                     <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
+
+                  <p className="text-center text-sm text-neutral-500 dark:text-white/50 mt-4">
+                    <span className="text-gold-500 dark:text-gold-400 font-medium">{t("info.fastResponse")}</span>
+                    {" · "}
+                    {t("info.responseTime")}
+                  </p>
                 </form>
               )}
             </div>

@@ -144,6 +144,8 @@
       "responseTime": "Rispondiamo solitamente entro 2 ore durante l'orario lavorativo."
     },
     "bookDirectly": "Prenota direttamente",
+    "bookingCredibility": "Recensioni verificate dai nostri ospiti su Booking.com",
+    "bookingExcellent": "Eccezionale",
     "buttons": {
       "booking": "Booking",
       "whatsapp": "WhatsApp",
@@ -178,9 +180,9 @@
     "bookNow": "Prenota",
     "copyright": "Tutti i diritti riservati.",
     "address": "Via Milazzo, 14 · 00185 Roma, Italia",
-    "owner": "Titolare: Alessandro Massoli",
-    "cf": "C.F.: MSSLSN65T10H501K",
-    "cin": "CIN: in attesa di comunicazione",
+    "owner": "Titolare: Marina Testa",
+    "cf": "C.F.: TSTMRN65S67H5L1J",
+    "cin": "CIN: IT058091C22REDPDPQ",
     "privacy": "Privacy & Cookie Policy"
   }
 }
