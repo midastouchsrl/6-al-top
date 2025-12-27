@@ -9,38 +9,38 @@ import { useTranslations } from "next-intl";
 
 const galleryImages = [
   {
-    src: "/IMG_0599.jpeg",
-    alt: "Soggiorno elegante",
+    src: "/IMG_0854.webp",
+    alt: "Camera da letto",
     span: "md:col-span-2 md:row-span-2",
   },
   {
-    src: "/IMG_0854.jpeg",
-    alt: "Camera da letto",
-  },
-  {
-    src: "/0629F409-911F-4D82-B6BF-8066FBB0B6EB.png",
+    src: "/0629F409-911F-4D82-B6BF-8066FBB0B6EB.webp",
     alt: "Camino e TV",
   },
   {
-    src: "/A10FD463-F510-45D8-A976-6120A68BCB5C.png",
+    src: "/A10FD463-F510-45D8-A976-6120A68BCB5C.webp",
     alt: "Bagno in marmo",
   },
   {
-    src: "/IMG_0855.jpeg",
+    src: "/IMG_0855.webp",
     alt: "Dettagli di lusso",
     span: "md:col-span-2",
   },
   {
-    src: "/IMG_0858.jpeg",
+    src: "/IMG_0858.webp",
     alt: "Bagno completo",
   },
   {
-    src: "/66E61601-CD36-4C30-87E8-375CCE344489.png",
+    src: "/66E61601-CD36-4C30-87E8-375CCE344489.webp",
     alt: "Area vanity",
   },
   {
-    src: "/IMG_0856.jpeg",
+    src: "/IMG_0856.webp",
     alt: "Camera da letto vista",
+  },
+  {
+    src: "/IMG_0599.webp",
+    alt: "Soggiorno elegante",
   },
 ];
 
@@ -101,6 +101,7 @@ export default function Gallery() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 768px) 50vw, 25vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-neutral-950/0 group-hover:bg-neutral-950/40 dark:group-hover:bg-neutral-950/40 transition-colors duration-500" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -148,15 +149,16 @@ export default function Gallery() {
           </button>
 
           <div
-            className="relative w-full max-w-5xl max-h-[80vh] mx-4 aspect-video rounded-2xl overflow-hidden"
+            className="relative w-[90vw] h-[85vh] max-w-6xl"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
               src={galleryImages[currentIndex].src}
               alt={galleryImages[currentIndex].alt}
               fill
-              className="object-contain"
-              sizes="100vw"
+              className="object-contain rounded-2xl"
+              sizes="90vw"
+              priority
             />
           </div>
 

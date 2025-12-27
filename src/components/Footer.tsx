@@ -72,6 +72,18 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Legal Info */}
+        <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-white/5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs text-neutral-400 dark:text-white/30">
+            <p>{t("owner")}</p>
+            <p>{t("cf")}</p>
+            <p>{t("cin")}</p>
+            <a href="/privacy" className="hover:text-gold-500 dark:hover:text-gold-400 transition-colors">
+              {t("privacy")}
+            </a>
+          </div>
+        </div>
+
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-neutral-400 dark:text-white/30">

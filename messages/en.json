@@ -173,8 +173,13 @@
     "description": "A luxury rooftop retreat in the heart of Rome, steps from Termini Station.",
     "quickLinks": "Quick Links",
     "contact": "Contact",
+    "legal": "Legal Info",
     "bookNow": "Book Now",
     "copyright": "All rights reserved.",
-    "address": "Via Milazzo, 14 · 00185 Roma, Italia"
+    "address": "Via Milazzo, 14 · 00185 Roma, Italia",
+    "owner": "Owner: Alessandro Massoli",
+    "cf": "Tax Code: MSSLSN65T10H501K",
+    "cin": "CIN: pending",
+    "privacy": "Privacy & Cookie Policy"
   }
 }

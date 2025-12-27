@@ -173,8 +173,13 @@
     "description": "Un rifugio di lusso sul tetto nel cuore di Roma, a pochi passi dalla Stazione Termini.",
     "quickLinks": "Link Rapidi",
     "contact": "Contatti",
+    "legal": "Info Legali",
     "bookNow": "Prenota",
     "copyright": "Tutti i diritti riservati.",
-    "address": "Via Milazzo, 14 · 00185 Roma, Italia"
+    "address": "Via Milazzo, 14 · 00185 Roma, Italia",
+    "owner": "Titolare: Alessandro Massoli",
+    "cf": "C.F.: MSSLSN65T10H501K",
+    "cin": "CIN: in attesa di comunicazione",
+    "privacy": "Privacy & Cookie Policy"
   }
 }

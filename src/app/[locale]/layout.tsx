@@ -176,6 +176,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${sora.variable} ${dmSans.variable} dark`} suppressHydrationWarning>
       <head>
+        <link rel="preload" href="/hero-bg.webp" as="image" type="image/webp" />
         <link rel="alternate" hrefLang="it" href="https://www.6altop.com/" />
         <link rel="alternate" hrefLang="en" href="https://www.6altop.com/en" />
         <link rel="alternate" hrefLang="x-default" href="https://www.6altop.com/" />

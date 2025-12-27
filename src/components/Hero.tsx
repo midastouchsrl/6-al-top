@@ -17,12 +17,12 @@ export default function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center blur-[2px]"
           style={{
-            backgroundImage: `url('/hero-bg.png')`,
+            backgroundImage: `url('/hero-bg.webp')`,
             transform: 'scale(1.02)',
           }}
         />
         <div className="absolute inset-0 bg-neutral-950/60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-neutral-50/70 dark:to-neutral-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% via-neutral-50/50 via-80% to-neutral-50 dark:via-neutral-950/50 dark:to-neutral-950" />
         <div className="absolute inset-0 bg-grid opacity-30" />
       </div>
 
