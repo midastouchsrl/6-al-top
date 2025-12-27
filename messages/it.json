@@ -57,36 +57,36 @@
     "subtitle": "Ogni dettaglio progettato per il tuo comfort e la tua comodità.",
     "items": {
       "jacuzzi": {
-        "title": "Vasca Idromassaggio",
-        "description": "Con cromoterapia e 28 getti"
+        "title": "Jacuzzi",
+        "description": "Idromassaggio a 28 getti con cromoterapia"
       },
       "shower": {
-        "title": "Doccia Multifunzione",
+        "title": "Doccia Spa",
         "description": "Soffione a pioggia e getti laterali"
       },
       "tv": {
-        "title": "Smart TV 4K",
-        "description": "Due TV (55\" e 50\") con Sky e Netflix"
+        "title": "Intrattenimento 4K",
+        "description": "TV 55\" + 50\" con Sky e Netflix"
       },
       "fireplace": {
-        "title": "Camino a Bioetanolo",
-        "description": "Fiamma vera, senza canna fumaria"
+        "title": "Camino",
+        "description": "Design ecologico a bioetanolo"
       },
       "climate": {
-        "title": "Climatizzazione",
-        "description": "Aria condizionata e riscaldamento"
+        "title": "Clima",
+        "description": "Controllo smart AC e riscaldamento"
       },
       "kitchen": {
-        "title": "Cucina Attrezzata",
-        "description": "Forno, frigo, piano cottura, macchina espresso"
+        "title": "Cucina",
+        "description": "Elettrodomestici completi e macchina espresso"
       },
       "wifi": {
-        "title": "WiFi Gratuito",
-        "description": "Fibra ottica ad alta velocità"
+        "title": "WiFi Veloce",
+        "description": "Connessione in fibra ottica"
       },
       "linens": {
-        "title": "Biancheria Premium",
-        "description": "Lenzuola e asciugamani di alta qualità"
+        "title": "Biancheria di Lusso",
+        "description": "Lenzuola in cotone egiziano"
       }
     }
   },

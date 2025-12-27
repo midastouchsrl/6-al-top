@@ -57,36 +57,36 @@
     "subtitle": "Every detail designed for your comfort and convenience.",
     "items": {
       "jacuzzi": {
-        "title": "Hot Tub",
-        "description": "With chromotherapy and 28 jets"
+        "title": "Jacuzzi",
+        "description": "28-jet hydromassage with chromotherapy"
       },
       "shower": {
-        "title": "Multi-Function Shower",
+        "title": "Spa Shower",
         "description": "Rainfall head and side jets"
       },
       "tv": {
-        "title": "Smart TV 4K",
-        "description": "Two TVs (55\" and 50\") with Sky & Netflix"
+        "title": "4K Entertainment",
+        "description": "55\" + 50\" TVs with Sky & Netflix"
       },
       "fireplace": {
-        "title": "Bioethanol Fireplace",
-        "description": "Real flame, no chimney required"
+        "title": "Fireplace",
+        "description": "Eco-friendly bioethanol design"
       },
       "climate": {
-        "title": "Climate Control",
-        "description": "Air conditioning and heating"
+        "title": "Climate",
+        "description": "Smart AC & heating control"
       },
       "kitchen": {
-        "title": "Fully Equipped Kitchen",
-        "description": "Oven, fridge, stovetop, espresso machine"
+        "title": "Kitchen",
+        "description": "Full appliances & espresso machine"
       },
       "wifi": {
-        "title": "Free WiFi",
-        "description": "High-speed fiber optic"
+        "title": "Fast WiFi",
+        "description": "Fiber-optic connection"
       },
       "linens": {
-        "title": "Premium Linens",
-        "description": "High-quality sheets and towels"
+        "title": "Luxury Linens",
+        "description": "Egyptian cotton bedding"
       }
     }
   },
