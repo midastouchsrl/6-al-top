@@ -57,36 +57,36 @@
     "subtitle": "Ogni dettaglio progettato per il tuo comfort e la tua comodità.",
     "items": {
       "jacuzzi": {
-        "title": "Jacuzzi",
-        "description": "Idromassaggio a 28 getti con cromoterapia"
+        "title": "Vasca Idromassaggio",
+        "description": "Con cromoterapia e 28 getti"
       },
       "shower": {
-        "title": "Doccia Spa",
-        "description": "Esperienza multi-getto a pioggia"
+        "title": "Doccia Multifunzione",
+        "description": "Soffione a pioggia e getti laterali"
       },
       "tv": {
-        "title": "Intrattenimento 4K",
-        "description": "TV 55\" + 50\" con Sky e Netflix"
+        "title": "Smart TV 4K",
+        "description": "Due TV (55\" e 50\") con Sky e Netflix"
       },
       "fireplace": {
-        "title": "Camino",
-        "description": "Design ecologico a bioetanolo"
+        "title": "Camino a Bioetanolo",
+        "description": "Fiamma vera, senza canna fumaria"
       },
       "climate": {
-        "title": "Clima",
-        "description": "Controllo smart AC e riscaldamento"
+        "title": "Climatizzazione",
+        "description": "Aria condizionata e riscaldamento"
       },
       "kitchen": {
-        "title": "Cucina",
-        "description": "Elettrodomestici completi e macchina espresso"
+        "title": "Cucina Attrezzata",
+        "description": "Forno, frigo, piano cottura, macchina espresso"
       },
       "wifi": {
-        "title": "WiFi Veloce",
-        "description": "Connessione in fibra ottica"
+        "title": "WiFi Gratuito",
+        "description": "Fibra ottica ad alta velocità"
       },
       "linens": {
-        "title": "Biancheria di Lusso",
-        "description": "Lenzuola in cotone egiziano"
+        "title": "Biancheria Premium",
+        "description": "Lenzuola e asciugamani di alta qualità"
       }
     }
   },

@@ -134,7 +134,7 @@ export default function Gallery() {
 
           <button
             onClick={(e) => { e.stopPropagation(); prevImage(); }}
-            className="absolute left-4 md:left-8 w-12 h-12 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20 transition-colors"
+            className="absolute left-4 md:left-8 z-20 w-12 h-12 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20 transition-colors"
             aria-label="Previous"
           >
             <ChevronLeft size={24} />
@@ -142,14 +142,14 @@ export default function Gallery() {
 
           <button
             onClick={(e) => { e.stopPropagation(); nextImage(); }}
-            className="absolute right-4 md:right-8 w-12 h-12 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20 transition-colors"
+            className="absolute right-4 md:right-8 z-20 w-12 h-12 flex items-center justify-center bg-white/10 rounded-full text-white hover:bg-white/20 transition-colors"
             aria-label="Next"
           >
             <ChevronRight size={24} />
           </button>
 
           <div
-            className="relative w-[90vw] h-[85vh] max-w-6xl"
+            className="relative w-[80vw] h-[70vh] md:w-[90vw] md:h-[85vh] max-w-6xl z-10"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
