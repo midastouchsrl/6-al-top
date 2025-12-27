@@ -61,7 +61,6 @@ export default function Contact() {
       setCheckIn(null);
       setCheckOut(null);
       setPrivacyConsent(false);
-      setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
       console.error('Error sending message:', error);
       alert(locale === "it" ? "Errore nell'invio. Riprova o contattaci via WhatsApp." : "Error sending. Please try again or contact us via WhatsApp.");
@@ -184,8 +183,8 @@ export default function Contact() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="flex flex-col items-center justify-center py-16 text-center"
                 >
-                  <div className="w-20 h-20 rounded-full bg-gold-500/20 dark:bg-gold-400/20 flex items-center justify-center mb-6">
-                    <CheckCircle className="w-10 h-10 text-gold-500 dark:text-gold-400" />
+                  <div className="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
+                    <CheckCircle className="w-10 h-10 text-green-500" />
                   </div>
                   <h4 className="text-2xl font-display font-semibold text-neutral-950 dark:text-white mb-2">
                     {t("success.title")}
