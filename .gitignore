@@ -31,6 +31,6 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
-# HATEFUL VPS-specific context (runtime-generated)
-.hateful/context/
+# HATEFUL VPS-specific (runtime-generated)
+.hateful/
 .vercel
