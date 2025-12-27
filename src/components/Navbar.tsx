@@ -50,11 +50,11 @@ export default function Navbar() {
           <nav className="flex items-center justify-between">
             <a href="#home" className="relative z-10">
               <Image
-                src="/logo.png"
+                src="/logo-light.png"
                 alt="6 Al Top"
                 width={160}
                 height={96}
-                className="h-16 md:h-[77px] w-auto brightness-0 invert"
+                className="h-16 md:h-[77px] w-auto"
                 priority
               />
             </a>
