@@ -77,7 +77,7 @@ export default function Hero() {
             <div key={stat.label} className="text-center">
               <div className="text-2xl md:text-3xl font-display font-semibold text-white flex items-center justify-center gap-1">
                 {stat.value}
-                {stat.showStar && <Star className="w-5 h-5 md:w-6 md:h-6 text-gold-500 dark:text-gold-400 fill-gold-500 dark:fill-gold-400" />}
+                {stat.showStar && <Star className="w-5 h-5 md:w-6 md:h-6 text-[#F5E6C8] fill-[#F5E6C8]" />}
               </div>
               <div className="text-sm text-white/50 mt-1">{stat.label}</div>
             </div>
