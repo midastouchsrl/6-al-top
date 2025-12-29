@@ -38,16 +38,8 @@ ${isItalian ? 'Inviato dal sito 6altop.com' : 'Sent from 6altop.com'}
     await apiInstance.sendTransacEmail(sendSmtpEmail);
 
     return NextResponse.json({ success: true });
-  } catch (error: unknown) {
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    const errorDetails = error && typeof error === 'object' && 'response' in error
-      ? JSON.stringify((error as { response?: { body?: unknown } }).response?.body)
-      : '';
-    console.error('Brevo API error:', errorMessage, errorDetails);
-    return NextResponse.json({
-      error: 'Failed to send email',
-      details: errorMessage,
-      brevoError: errorDetails || undefined
-    }, { status: 500 });
+  } catch (error) {
+    console.error('Brevo API error:', error);
+    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
   }
 }
