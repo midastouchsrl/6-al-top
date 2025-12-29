@@ -29,7 +29,7 @@ ${isItalian ? 'Inviato dal sito 6altop.com' : 'Sent from 6altop.com'}
     `.trim();
 
     const sendSmtpEmail = new brevo.SendSmtpEmail();
-    sendSmtpEmail.sender = { name: '6 Al Top', email: 'noreply@6altop.com' };
+    sendSmtpEmail.sender = { name: '6 Al Top', email: 'info@6altop.com' };
     sendSmtpEmail.to = [{ email: 'info@6altop.com', name: '6 Al Top' }];
     sendSmtpEmail.replyTo = { email: email, name: name };
     sendSmtpEmail.subject = `${isItalian ? 'Richiesta Prenotazione' : 'Booking Inquiry'} - ${name}`;
